@@ -24,131 +24,128 @@
     </header>
     <main class="container">
       <section class="filters">
-        <h2 class="visually-hidden">Филтр товаров</h2>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Место для форм с фильтрами -->
       </section>
-      <section class="sotring">
-        <h2 class="visually-hidden">Сортировка товаров</h2>
-        <p>Сортировать:</p>
-        <ul class="sorting-buttons">
-          <li>
-            <button class="sorting-current-btn">По цене</button>
-          </li>
-          <li>
-            <button class="sorting-btn">По типу</button>
-          </li>
-          <li>
-            <button class="sorting-btn">По названию</button>
-          </li>
-          <li>
-            <button class="sotring-range-down">Сортировка по убыванию</button>
-          </li>
-          <li>
-            <button class="sotring-range-up">Сортировка по возрастанию</button>
-          </li>
-        </ul>
-      </section>
-      <section class="catalog">
-        <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
-        <ul class="catalog-list">
-          <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img src="img/sedona.jpg" width="" height="" alt="Седона"> <!-- Нужно ли делать изображение ссылкой? -->
-            </p>
-            <div class="description-hover">
-              <h3>
-                <a href="catalog-item.html">Sedona</a>
-              </h3>
-              <p class="catalog-item-description">Информационный сайт для туристов</p>
-              <a class="button" href="#">9900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img src="img/pink.jpg" width="#" height="#" alt="Пинк Эпп">
-            </p>
-            <div class="description-hover">
-              <h3>
-                <a href="catalog-item.html">Pink App</a>
-              </h3>
-              <p class="catalog-item-description">Продуктовый лендинг  приложения для iOs и Android</p>
-              <a class="button" href="#">9900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img src="img/barbershop.jpg" width="#" height="#" alt="Барбершоп Бородинский">
-            </p>
-            <div class="description-hover">
-              <h3>
-                <a href="catalog-item.html">Barbershop</a>
-              </h3>
-              <p class="catalog-item-description">Сайт салона красоты. Для мужчин, да.</p>
-              <a class="button" href="#">9900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img src="img/mishka.jpg" width="#" height="#" alt="Мишка - магизн вязанных игрушек">
-            </p>
-            <div class="description-hover">
-              <h3>
-                <a href="catalog-item.html">Mishka</a>
-              </h3>
-              <p class="catalog-item-description">Интернет-магазин вязанных игрушек</p>
-              <a class="button" href="#">9900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img src="img/a-plus.jpg" width="#" height="#" alt="A Plus">
-            </p>
-            <div class="description-hover">
-              <h3>
-                <a href="catalog-item.html">A plus</a>
-              </h3>
-              <p class="catalog-item-description">Лендинг курсов повышения квалификации</p>
-              <a class="button" href="#">9900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog-item">
-            <p class="catalog-item-image">
-              <img src="img/kvast.jpg" width="#" height="#" alt="Кваст">
-            </p>
-            <div class="description-hover">
-              <h3>
-                <a href="catalog-item.html">Кваст</a>
-              </h3>
-              <p class="catalog-item-description">Промо-сайт производителя крафтового кваса</p>
-              <a class="button" href="#">9900 руб.</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current">1</li>
-          <li class="pagination-item">2</li>
-          <li class="pagination-item">3</li>
-          <li class="pagination-item-next">Следующая</li>
-        </ul>
-      </section>
+      <div class="catalog-content">
+        <section class="sorting">
+          <h2 class="visually-hidden">Сортировка товаров</h2>
+          <p>Сортировать:</p>
+          <ul class="sorting-buttons">
+            <li class="sorting-item sorting-item-current">
+              <button class="sotring-btn sorting-current-btn">По цене</button>
+            </li>
+            <li class="sorting-item">
+              <button class="sorting-btn">По типу</button>
+            </li>
+            <li class="sorting-item">
+              <button class="sorting-btn">По названию</button>
+            </li>
+            <li class="sotring-range-down">
+              <button>Сортировка по убыванию</button>
+            </li>
+            <li class="sotring-range-up">
+              <button>Сортировка по возрастанию</button>
+            </li>
+          </ul>
+        </section>
+        <section class="catalog">
+          <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <img class="catalog-item-image" src="img/sedona.jpg" width="" height="" alt="Седона"> <!-- Нужно ли делать изображение ссылкой? -->
+              <div class="catalog-item-info">
+                <h3 class="catalog-item-name">
+                  <a href="catalog-item.html">Sedona</a>
+                </h3>
+                <p class="catalog-item-description">Информационный сайт для туристов</p>
+                <a class="button button-item-price" href="#">9900 руб.</a>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-image" src="img/pink.jpg" width="#" height="#" alt="Пинк Эпп">
+              <div class="catalog-item-info">
+                <h3 class="catalog-item-name">
+                  <a href="catalog-item.html">Pink App</a>
+                </h3>
+                <p class="catalog-item-description">Продуктовый лендинг  приложения для iOs и Android</p>
+                <a class="button button-item-price" href="#">9900 руб.</a>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-image" src="img/barbershop.jpg" width="#" height="#" alt="Барбершоп Бородинский">
+              <div class="catalog-item-info">
+                <h3 class="catalog-item-name">
+                  <a href="catalog-item.html">Barbershop</a>
+                </h3>
+                <p class="catalog-item-description">Сайт салона красоты. Для мужчин, да.</p>
+                <a class="button button-item-price" href="#">9900 руб.</a>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-image" src="img/mishka.jpg" width="#" height="#" alt="Мишка - магизн вязанных игрушек">
+              <div class="catalog-item-info">
+                <h3 class="catalog-item-name">
+                  <a href="catalog-item.html">Mishka</a>
+                </h3>
+                <p class="catalog-item-description">Интернет-магазин вязанных игрушек</p>
+                <a class="button button-item-price" href="#">9900 руб.</a>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-image" src="img/a-plus.jpg" width="#" height="#" alt="A Plus">
+              <div class="catalog-item-info">
+                <h3 class="catalog-item-name">
+                  <a href="catalog-item.html">A plus</a>
+                </h3>
+                <p class="catalog-item-description">Лендинг курсов повышения квалификации</p>
+                <a class="button button-item-price" href="#">9900 руб.</a>
+              </div>
+            </li>
+            <li class="catalog-item">
+              <img class="catalog-item-image" src="img/kvast.jpg" width="#" height="#" alt="Кваст">
+              <div class="catalog-item-info">
+                <h3 class="catalog-item-name">
+                  <a href="catalog-item.html">Кваст</a>
+                </h3>
+                <p class="catalog-item-description">Промо-сайт производителя крафтового кваса</p>
+                <a class="button button-item-price" href="#">9900 руб.</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="pagination-list">
+            <li class="pagination-item pagination-item-current">1</li>
+            <li class="pagination-item">2</li>
+            <li class="pagination-item">3</li>
+            <li class="pagination-item pagination-item-next">Следующая</li>
+          </ul>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
-        <h3>Nerds desing studio</h3> <!-- Или тут лучше исполизвать <b> и поместить внутрь <p>? -->
-        <p class="footer-contacts">
-          191186, Санкт-Петергбург,<br>
-          ул. Б. Конюшенная, д. 19/8<br>
-          <br>
-          тел. +7 (812) 275-75-75
-          <a class="write-us-btn">Напишите нам</a>
-        </p>
-        <span>Карта</span>
-        <div class="footer-social">
-          <b>Давайте дружить, это выгодно!</b>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-          <a class="social-btn" href="#">Вконтакте</a>
-          <a class="social-btn" href="#">Фейсбук</a>
-          <a class="social-btn" href="#">Инстаграмм</a>
-        </div>
+        <section class="footer-contacts">
+          <b class="footer-contacts-title">Nerds desing studio</b>
+          <p class="footer-contacts-address">
+          191186, Санкт-Петергбург,
+          ул. Б. Конюшенная, д. 19/8
+            <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          </p>
+          <a class="button" href="#">Напишите нам</a>
+        </section>
+        <section class="footer-map">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+        </section>
+        <section class="footer-social">
+          <p class="footer-social-links">
+            <div class="social-list">
+              <a class="social-btn" href="#">Вконтакте</a>
+              <a class="social-btn" href="#">Фейсбук</a>
+              <a class="social-btn" href="#">Инстаграмм</a>
+            </div>
+            <b>Давайте дружить, это выгодно!</b>
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </section>
     </footer>
     <section class="modal modal-write-us">
       <h2>Напишите нам</h2>
