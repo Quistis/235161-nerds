@@ -25,7 +25,73 @@
     <main class="container">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Место для форм с фильтрами -->
+        <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <p class="filters-item">
+              <label class="visually-hidden" for="cost-range">Фильтр по стоимости</label>
+              <input class="visually-hidden filter-cost-range" type="range" name="cost-range" id="cost-range" min="0" max="15000" step="1">
+            </p class="filters-item">
+            <div class="range-filter-container">
+              <div class="first-filter-stripe">
+                <div class="second-filter-stripe"></div>
+              </div>
+              <div class="first-filter-marker"></div>
+              <div class="second-filter-marker"></div>
+            </div>
+            <p class="filters-item">
+              <label for="cost-range-output-min">От</label>
+              <input class="filter-cost-range-output" type="number" name="cost-range-output-min" id="cost-range-output-min" placeholder="0">
+            </p>
+            <p class="filters-item">
+              <label for="cost-range-output-max">До</label>
+              <input class="filter-cost-range-output" type="number" name="cost-range-output-max" id="cost-range-output-max" placeholder="15000">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked>
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="fixed" id="filter-fixed">
+                <label for="filter-fixed">Фиксированная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="rubber" id="filter-rubber">
+                <label for="filter-rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="features-block" id="filter-features-block">
+                <label for="filter-features-block">Блок преимуществ</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news-block" id="filter-news-block" checked>
+                <label for="filter-news-block">Новости</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery-block" id="filter-gallery-block">
+                <label for="filter-gallery-block">Галерея</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="shopping-cart-block" id="filter-shopping-cart-block">
+                <label for="filter-shopping-cart-block">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="button filter-button">Показать</button>
+        </form>
       </section>
       <div class="catalog-content">
         <section class="sorting">
@@ -33,13 +99,13 @@
           <p>Сортировать:</p>
           <ul class="sorting-buttons">
             <li class="sorting-item sorting-item-current">
-              <button class="sotring-btn sorting-current-btn">По цене</button>
+              <button class="sotring-button sorting-current-button">По цене</button>
             </li>
             <li class="sorting-item">
-              <button class="sorting-btn">По типу</button>
+              <button class="sorting-button">По типу</button>
             </li>
             <li class="sorting-item">
-              <button class="sorting-btn">По названию</button>
+              <button class="sorting-button">По названию</button>
             </li>
             <li class="sotring-range-down">
               <button>Сортировка по убыванию</button>
@@ -53,7 +119,7 @@
           <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-item-image" src="img/catalog-sedona.jpg" width="360" height="576" alt="Седона"> <!-- Нужно ли делать изображение ссылкой? -->
+              <img class="catalog-item-image" src="img/catalog-sedona.jpg" width="360" height="576" alt="Седона">
               <div class="catalog-item-info">
                 <h3 class="catalog-item-name">
                   <a href="catalog-item.html">Sedona</a>
@@ -113,12 +179,14 @@
               </div>
             </li>
           </ul>
-          <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current">1</li>
-            <li class="pagination-item">2</li>
-            <li class="pagination-item">3</li>
-            <li class="pagination-item pagination-item-next">Следующая</li>
-          </ul>
+          <div class="pagination">
+            <ul class="pagination-list">
+              <li class="pagination-item pagination-item-current" aria-label="Первая страница каталога"><a href="#">1</a></li>
+              <li class="pagination-item"><a href="#" aria-label="Вторая страница каталога">2</a></li>
+              <li class="pagination-item"><a href="#" aria-label="Третья страница каталога">3</a></li>
+              <li class="pagination-item pagination-item-next" aria-label="Следующая страница каталога"><a href="#">Следующая</a></li>
+            </ul>
+          </div>
         </section>
       </div>
     </main>
@@ -134,15 +202,15 @@
           <a class="button" href="#">Напишите нам</a>
         </section>
         <section class="footer-map">
-          <h2 class="map">Карта</h2>
-          <iframe src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+          <h2 class="map">Как до нас добраться</h2>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" width="560" height="400" frameborder="1" allowfullscreen="true" arial-label="Карта. Наш адрес - Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
         </section>
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные контакты</h2>
             <div class="social-list">
-              <a class="social-btn" href="#">Вконтакте</a>
-              <a class="social-btn" href="#">Фейсбук</a>
-              <a class="social-btn" href="#">Инстаграмм</a>
+              <a class="button social-button" href="#">Подпишитесь на нас в Вконтакте</a>
+              <a class="button social-button" href="#">Подпишитесь на нас в Фейсбуке</a>
+              <a class="button social-button" href="#">Подпишитесь на нас в Инстаграмме</a>
             </div>
           <p class="footer-social-links">
             <b>Давайте дружить, это выгодно!</b>
@@ -152,9 +220,22 @@
     </footer>
     <section class="modal modal-write-us">
       <h2>Напишите нам</h2>
-      <!-- Место для формы -->
-      <span class="modal-close">x</span>
-      <a class="button"></a>
+      <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
+        <p class="write-us-item">
+          <label for="write-us-name">Ваше имя:</label>
+          <input class="write-us-name" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+        </p>
+        <p class="write-us-item">
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input class="write-us-email" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+        </p>
+        <p class="write-us-item">
+          <label for="write-us-text-field">Текст письма:</label>
+          <textarea class="write-us-text-field" name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button write-us-button" type="submit">Отправить</button>
+      </form>
+        <button class="button modal-close">Закрыть</button>
     </section>
   </body>
 </html>
