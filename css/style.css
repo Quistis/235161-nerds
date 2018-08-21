@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #fb565a;
+  border: none;
+}
+/*-----------------------------------
+              Header
+-----------------------------------*/
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: #fb565a;
+}
+/*---------------------------------
+      Секция со слайдером
+---------------------------------*/
+.studio-features-slider {
+  background-color: #eeeeee;
+}
+
+.studio-features-slider-item .studio-features-slider-header {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.studio-features-slider-item .studio-features-slider-description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* Здесь будут стили для кнопки "Узнать больше"
+.studio-features-button {
+
+}
+*/
+
+.studio-features-button:hover,
+.studio-features-button:focus {
+  background-color: #e74246;
+}
+/*----------------------------------------
+            Advantages block
+-----------------------------------------*/
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-item .advantages-item-header {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.button-red:hover,
+.button-red:focus {
+  background-color: #e74246;
+}
+
+.button-green {
+  background-color: #00ca74;
+}
+
+.button-green:hover,
+.button-green:focus {
+  background-color: #00bc6c;
+}
+
+.button-yellow {
+  background-color: #efc84a;
+}
+
+.button-yellow:hover,
+.button-yellow:focus {
+  background-color: #eab534;
+}
+/*-------------------------------
+          About us block
+--------------------------------*/
+.about-us-title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.about-us-capabilities {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.orders-list {
+  list-style: none;
+}
+
+.stats-table-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.numeric-stats-info {
+  font-size: 45px;
+  line-height: 10px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.stats-description {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #283136;
+}
+/*-----------------------------------------------
+                      Галерея
+-------------------------------------------------*/
+.projects-gallery-content img {
+  opacity: 0.2;
+}
+
+.projects-gallery-content img:hover {
+  opacity: 1;
+}
+/*--------------------------------------------------
+                      Контакты
+--------------------------------------------------*/
+.footer-contacts {
+  background-color: #ffffff;
+}
+
+.footer-contacts-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.footer-contacts-adress {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.write-us-tel {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.write-us-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/*---------------------------------------
+              Место для карты
+________________________________________*/
+/*---------------------------------------
+              Социальный блок
+---------------------------------------*/
+.social-button-vk,
+.social-button-fb,
+.social-button-inst {
+  background-color: #e1e1e1;
+}
+
+.social-button-vk:hover,
+.social-button-vk:focus,
+.social-button-fb:hover,
+.social-button-fb:focus,
+.social-button-inst:hover,
+.social-button-ints:focus {
+  background-color: #e74246;
+}
+
+.footer-social-links b {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.footer-social-links p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #444444;
+}
+/*-------------------------------------
+        Модальное окно Write Us
+---------------------------------------*/
+.modal-write-us h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.write-us-item label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.write-us-item input {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #d3d3d3;
+
+  background-color: transparent;
+  border: 1px solid #d7dcde;
+}
+
+.write-us-item input:hover {
+  border-color: 1px solid #b4b9bb;
+}
+
+.write-us-item input:focus {
+  border-color: 1px solid #b4b9bb;
+}
+
+.write-us-submit-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #fb565a;
+}
