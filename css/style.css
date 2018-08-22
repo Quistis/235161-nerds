@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -38,6 +38,25 @@ a {
   background-color: #fb565a;
   border: none;
 }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+position: absolute;
+
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+
+white-space: nowrap;
+
+-webkit-clip-path: inset(100%);
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
 /*-----------------------------------
               Header
 -----------------------------------*/
@@ -54,8 +73,6 @@ a {
   line-height: 30px;
   font-weight: 500;
   color: #000000;
-
-  background-color: #eeeeee;
 }
 
 .site-navigation,
@@ -65,19 +82,23 @@ a {
 
 .site-navigation a,
 .user-navigation a {
-  color: #000000;
+  color: inherit;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  background-color: #fb565a;
+.site-navigation-item a:hover,
+.site-navigation-item a:focus,
+.shopping-navigation-item a:hover,
+.shopping-navigation-item a:focus {
+  color: #fb565a;
+}
+
+.site-navigation-item a:active,
+.shopping-navigation-item a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .site-navigation-current a {
-  text-decoration: underline;
-  text-decoration-color: #fb565a;
+  color: #000000;
 }
 
 .site-navigation-current a:hover,
@@ -136,6 +157,12 @@ a {
 .studio-features-button:focus {
   background-color: #e74246;
 }
+
+.studio-features-button:active {
+  background-color: #d7373b;
+
+  color: rbga(255, 255, 255, 0.3);
+}
 /*----------------------------------------
             Advantages block
 -----------------------------------------*/
@@ -151,13 +178,14 @@ a {
   text-transform: uppercase;
 }
 
-.advantages-item-description {
-  font: inherit;
-}
-
 .button-red:hover,
 .button-red:focus {
   background-color: #e74246;
+}
+
+.button-red:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green {
@@ -169,6 +197,11 @@ a {
   background-color: #00bc6c;
 }
 
+.button-green:active {
+  background-color: #00aa62;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-yellow {
   background-color: #efc84a;
 }
@@ -176,6 +209,11 @@ a {
 .button-yellow:hover,
 .button-yellow:focus {
   background-color: #eab534;
+}
+
+.button-yellow:active {
+  background-color: #e5a722;
+  color: rgba(255, 255, 255, 0.3);
 }
 /*-------------------------------
           About us block
@@ -185,10 +223,6 @@ a {
   line-height: 45px;
   font-weight: 500;
   color: #000000;
-}
-
-.about-us-description {
-  font: inherit;
 }
 
 .about-us-capabilities {
@@ -201,10 +235,6 @@ a {
 
 .orders-list {
   list-style: none;
-}
-
-.orders-item {
-  font: inherit;
 }
 
 .stats-table-title {
@@ -236,8 +266,13 @@ a {
   opacity: 0.2;
 }
 
-.projects-gallery-content img:hover {
+.projects-gallery-content img:hover,
+.projects-gallery-content img:focus {
   opacity: 1;
+}
+
+.projects-gallery-content img:active {
+  opacity: 0.1;
 }
 /*--------------------------------------------------
           Стилизация страницы каталога
@@ -391,6 +426,10 @@ a {
   background-color: #e74246;
 }
 
+.button-item-price:active {
+  background-color: #d7373b;
+}
+
 .pagination-list {
   list-style: none;
 }
@@ -412,12 +451,19 @@ a {
 .pagination-item-current a {
   border: 2px solid #dbdbdb;
 
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .pagination-item-current a:hover,
 .pagination-item-current a:focus {
-  background-color: #ffffff;
+  background-color: transparent;
+}
+
+.pagination-item-next {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 /*--------------------------------------------------
                     Футер,  Контакты
@@ -460,29 +506,41 @@ a {
   background-color: #e74246;
 }
 
+.write-us-button:active {
+  background-color: #d7373b;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /*---------------------------------------
               Место для карты
 ________________________________________*/
 .footer-map {
   background-image: url("../img/map-reserve.jpg");
   background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-map-widget {
+  border: 1px;
+  width: 100%;
+  height: 416px;
 }
 /*---------------------------------------
               Социальный блок
 ---------------------------------------*/
-.social-button-vk,
-.social-button-fb,
-.social-button-inst {
+.social-button-item {
   background-color: #e1e1e1;
 }
 
-.social-button-vk:hover,
-.social-button-vk:focus,
-.social-button-fb:hover,
-.social-button-fb:focus,
-.social-button-inst:hover,
-.social-button-ints:focus {
+.social-button-item:hover,
+.social-button-item:focus {
   background-color: #e74246;
+}
+
+.social-button-item:active {
+  background-color: #d7373b;
 }
 
 .footer-social-links b {
@@ -522,7 +580,7 @@ ________________________________________*/
   color: #444444;
 
   background-color: transparent;
-  border: 1px solid #d7dcde;
+  border: 2px solid #d7dcde;
 }
 
 .write-us-item input:hover {
@@ -540,7 +598,7 @@ ________________________________________*/
   color: #444444;
 
   background-color: transparent;
-  border: 1px solid #d7dcde;
+  border: 2px solid #d7dcde;
 }
 
 .write-us-item textarea:hover {
@@ -558,4 +616,8 @@ ________________________________________*/
 
 .write-us-submit-button:hover {
   background-color: #e74246
+}
+
+.write-us-submit-button:active {
+  background-color: #d7373b;
 }
