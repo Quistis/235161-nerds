@@ -11,6 +11,16 @@ body {
   background-color: #ffffff;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 a {
   text-decoration: none;
 }
@@ -18,8 +28,9 @@ a {
 .button {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
+  text-transform: uppercase;
 
   text-align: center;
   vertical-align: middle;
@@ -30,10 +41,18 @@ a {
 /*-----------------------------------
               Header
 -----------------------------------*/
+.main-header {
+  background-color: #eeeeee;
+}
+
+.main-header-logo img:hover {
+  opacity: 0.8;
+}
+
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 
   background-color: #eeeeee;
@@ -55,6 +74,19 @@ a {
 .user-navigation a:focus {
   background-color: #fb565a;
 }
+
+.site-navigation-current a {
+  text-decoration: underline;
+  text-decoration-color: #fb565a;
+}
+
+.site-navigation-current a:hover,
+.site-navigation-current a:focus,
+.site-navigation-current a:visited,
+.site-navigation-current a:active {
+  color: #000000;
+  background-color: #eeeeee;
+}
 /*---------------------------------
       Секция со слайдером
 ---------------------------------*/
@@ -62,21 +94,39 @@ a {
   background-color: #eeeeee;
 }
 
-.studio-features-slider-item .studio-features-slider-header {
+.slider-item-1 {
+  background-image: url("../img/slider-slide1.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.slider-item-2 {
+  background-image: url("../img/slider-slide2.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.slider-item-3 {
+  background-image: url("../img/slider-slide3.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.studio-features-slider-header {
   font-size: 55px;
   line-height: 55px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 }
 
-.studio-features-slider-item .studio-features-slider-description {
+.studio-features-slider-description {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
 }
 
-/* Здесь будут стили для кнопки "Узнать больше"
+/*
 .studio-features-button {
 
 }
@@ -93,12 +143,16 @@ a {
   list-style: none;
 }
 
-.advantages-item .advantages-item-header {
+.advantages-item-header {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.advantages-item-description {
+  font: inherit;
 }
 
 .button-red:hover,
@@ -129,8 +183,12 @@ a {
 .about-us-title {
   font-size: 45px;
   line-height: 45px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
+}
+
+.about-us-description {
+  font: inherit;
 }
 
 .about-us-capabilities {
@@ -143,6 +201,10 @@ a {
 
 .orders-list {
   list-style: none;
+}
+
+.orders-item {
+  font: inherit;
 }
 
 .stats-table-title {
@@ -178,7 +240,187 @@ a {
   opacity: 1;
 }
 /*--------------------------------------------------
-                      Контакты
+          Стилизация страницы каталога
+-----------------------------------------------------*/
+.page-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters-form-item legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.filters-item label {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #283136;
+}
+
+.filter-input + label {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #283136;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #283136;
+
+  opacity: 0.3;
+}
+
+.filter-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #dfdfdf;
+}
+
+.sorting p {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting-buttons {
+  list-style: none;
+}
+
+.sorting-button {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+
+  border: none;
+
+  background-color: #ffffff;
+}
+
+.sorting-button:hover,
+.sorting-button:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-current-button {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+
+  border: none;
+
+  background-color: #ffffff;
+}
+
+.sorting-range-down button {
+  border: none;
+  background-color: #ffffff;
+}
+
+.sorting-range-up button {
+  border: none;
+  background-color: #ffffff;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-info {
+  background-color: #eeeeee;
+}
+
+.catalog-item-name a {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+
+  text-align: center;
+}
+
+.catalog-item-info p {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.button-item-price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #fb565a;
+}
+
+.button-item-price:hover,
+.button-item-price:focus {
+  background-color: #e74246;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: #dfdfdf;
+}
+
+.pagination-item-current a {
+  border: 2px solid #dbdbdb;
+
+  background-color: #ffffff;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus {
+  background-color: #ffffff;
+}
+/*--------------------------------------------------
+                    Футер,  Контакты
 --------------------------------------------------*/
 .footer-contacts {
   background-color: #ffffff;
@@ -209,13 +451,22 @@ a {
 .write-us-button {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
+}
+
+.write-us-button:hover,
+.write-us-button:focus {
+  background-color: #e74246;
 }
 
 /*---------------------------------------
               Место для карты
 ________________________________________*/
+.footer-map {
+  background-image: url("../img/map-reserve.jpg");
+  background-color: #ffffff;
+}
 /*---------------------------------------
               Социальный блок
 ---------------------------------------*/
@@ -253,7 +504,7 @@ ________________________________________*/
 .modal-write-us h2 {
   font-size: 45px;
   line-height: 45px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
 }
 
@@ -268,25 +519,43 @@ ________________________________________*/
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: #d3d3d3;
+  color: #444444;
 
   background-color: transparent;
   border: 1px solid #d7dcde;
 }
 
 .write-us-item input:hover {
-  border-color: 1px solid #b4b9bb;
+  border-color: #b4b9bb;
 }
 
 .write-us-item input:focus {
-  border-color: 1px solid #b4b9bb;
+  border-color: #000000;
+}
+
+.write-us-item textarea {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #444444;
+
+  background-color: transparent;
+  border: 1px solid #d7dcde;
+}
+
+.write-us-item textarea:hover {
+  border-color: #b4b9bb;
 }
 
 .write-us-submit-button {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
 
   background-color: #fb565a;
+}
+
+.write-us-submit-button:hover {
+  background-color: #e74246
 }

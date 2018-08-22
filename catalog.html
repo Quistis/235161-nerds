@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Дизайн-студия Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
@@ -16,7 +19,7 @@
           <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <ul class="shopping-navigation">
+        <ul class="user-navigation">
           <li class="shopping-cart-link"><a href="cart.html">Корзина</a></li>
         </ul>
       </nav>
@@ -93,10 +96,10 @@
             <li class="sorting-item">
               <button class="sorting-button">По названию</button>
             </li>
-            <li class="sotring-range-down">
+            <li class="sorting-range-down">
               <button>Сортировка по убыванию</button>
             </li>
-            <li class="sotring-range-up">
+            <li class="sorting-range-up">
               <button>Сортировка по возрастанию</button>
             </li>
           </ul>
@@ -167,7 +170,7 @@
           </ul>
           <div class="pagination">
             <ul class="pagination-list">
-              <li class="pagination-item pagination-item-current" aria-label="Первая страница каталога">1</li>
+              <li class="pagination-item pagination-item-current" aria-label="Первая страница каталога"><a>1</a></li>
               <li class="pagination-item"><a href="#" aria-label="Вторая страница каталога">2</a></li>
               <li class="pagination-item"><a href="#" aria-label="Третья страница каталога">3</a></li>
               <li class="pagination-item pagination-item-next" aria-label="Следующая страница каталога"><a href="#">Следующая</a></li>
@@ -184,8 +187,8 @@
           191186, Санкт-Петергбург,
           ул. Б. Конюшенная, д. 19/8
           </p>
-          <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          <a class="button" href="#">Напишите нам</a>
+          <a class="write-us-tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          <a class="button write-us-button" href="#">Напишите нам</a>
         </section>
         <section class="footer-map">
           <h2 class="map">Как до нас добраться</h2>
@@ -194,9 +197,9 @@
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные контакты</h2>
             <div class="social-list">
-              <a class="button social-button" href="#">Подпишитесь на нас в Вконтакте</a>
-              <a class="button social-button" href="#">Подпишитесь на нас в Фейсбуке</a>
-              <a class="button social-button" href="#">Подпишитесь на нас в Инстаграмме</a>
+              <a class="button social-button-vk" href="#">Подпишитесь на нас в Вконтакте</a>
+              <a class="button social-button-fb" href="#">Подпишитесь на нас в Фейсбуке</a>
+              <a class="button social-button-inst" href="#">Подпишитесь на нас в Инстаграмме</a>
             </div>
           <p class="footer-social-links">
             <b>Давайте дружить, это выгодно!</b>
@@ -219,7 +222,7 @@
           <label for="write-us-text-field">Текст письма:</label>
           <textarea class="write-us-text-field" name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button write-us-button" type="submit">Отправить</button>
+        <button class="button write-us-submit-button" type="submit">Отправить</button>
       </form>
         <button class="button modal-close">Закрыть</button>
     </section>
