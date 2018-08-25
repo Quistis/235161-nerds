@@ -57,13 +57,19 @@ clip-path: inset(100%);
 clip: rect(0 0 0 0);
 overflow: hidden;
 }
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 /*-----------------------------------
               Header
 -----------------------------------*/
 .main-header {
   background-color: #eeeeee;
 
-  margin-bottom: 18px;
+  padding-bottom: 9px;
 }
 
 .main-header-logo {
@@ -85,22 +91,6 @@ overflow: hidden;
   font-weight: 500;
   color: #000000;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.main-navigation-wrapper {
-  width: 100%;
-}
-
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.main-navigation-wrapper .container {
   display: flex;
   justify-content: space-between;
 }
@@ -156,6 +146,13 @@ overflow: hidden;
 ---------------------------------*/
 .studio-features-slider {
   background-color: #eeeeee;
+
+  padding-top: 9px;
+  padding-bottom: 80px;
+}
+
+.studio-features-slider-item {
+  padding-top: 67px;
 }
 
 .slider-item-1 {
@@ -168,12 +165,16 @@ overflow: hidden;
   background-image: url("../img/slider-slide2.png");
   background-repeat: no-repeat;
   background-position: center right;
+
+  display: none;
 }
 
 .slider-item-3 {
   background-image: url("../img/slider-slide3.png");
   background-repeat: no-repeat;
   background-position: center right;
+
+  display: none;
 }
 
 .studio-features-slider-header {
@@ -209,8 +210,22 @@ overflow: hidden;
 /*----------------------------------------
             Advantages block
 -----------------------------------------*/
+.advantages {
+  padding-top: 60px;
+  padding-top: 80px;
+}
+
 .advantages-list {
   list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item {
+  width: 300px;
 }
 
 .advantages-item-header {
