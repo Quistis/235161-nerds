@@ -276,6 +276,17 @@ overflow: hidden;
 /*-------------------------------
           About us block
 --------------------------------*/
+.about-studio {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us {
+  width: 660px;
+}
+
 .about-us-title {
   font-size: 45px;
   line-height: 45px;
@@ -293,6 +304,13 @@ overflow: hidden;
 
 .orders-list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.studio-stats {
+  width: 360px;
 }
 
 .stats-table-title {
@@ -320,6 +338,17 @@ overflow: hidden;
 /*-----------------------------------------------
                       Галерея
 -------------------------------------------------*/
+.projects-gallery {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects-gallery-content {
+  width: 260px;
+}
+
 .projects-gallery-content img {
   opacity: 0.2;
 }
@@ -578,6 +607,9 @@ ________________________________________*/
   background-color: #ffffff;
   background-position: center;
   background-repeat: no-repeat;
+
+  padding-top: 40px;
+  padding-bottom: 35px;
 }
 
 .footer-map-widget {
@@ -588,6 +620,21 @@ ________________________________________*/
 /*---------------------------------------
               Социальный блок
 ---------------------------------------*/
+.footer-social {
+  padding-top: 35px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-list {
+  width: 260px;
+}
+
+.footer-social-links {
+  width: 560px;
+  margin-left: 140px;
+}
+
 .social-button-item {
   background-color: #e1e1e1;
 }
