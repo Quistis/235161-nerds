@@ -148,7 +148,6 @@ overflow: hidden;
   background-color: #eeeeee;
 
   padding-top: 9px;
-  padding-bottom: 80px;
 }
 
 .studio-features-slider-item {
@@ -159,12 +158,16 @@ overflow: hidden;
   background-image: url("../img/slider-slide1.png");
   background-repeat: no-repeat;
   background-position: center right;
+
+  padding-bottom: 80px;
 }
 
 .slider-item-2 {
   background-image: url("../img/slider-slide2.png");
   background-repeat: no-repeat;
   background-position: center right;
+
+  padding-bottom: 80px;
 
   display: none;
 }
@@ -173,6 +176,8 @@ overflow: hidden;
   background-image: url("../img/slider-slide3.png");
   background-repeat: no-repeat;
   background-position: center right;
+
+  padding-bottom: 80px;
 
   display: none;
 }
@@ -364,11 +369,36 @@ overflow: hidden;
 /*--------------------------------------------------
           Стилизация страницы каталога
 -----------------------------------------------------*/
+.inner-page .main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 60px;
+}
+
+.inner-page .main-navigation {
+  margin-bottom: 80px;
+}
+
 .page-title {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+
+  width: 760px;
+  margin: 0 200px;
+  margin-bottom: 110px;
+}
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filters {
+  width: 260px;
 }
 
 .filters fieldset {
@@ -381,6 +411,11 @@ overflow: hidden;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.filter-cost-range-output {
+  width: 80px;
+  height: 36px;
 }
 
 .filters-item label {
@@ -424,16 +459,33 @@ overflow: hidden;
   background-color: #dfdfdf;
 }
 
+.catalog-content {
+  width: 760px;
+}
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
 .sorting p {
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-buttons {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
+  width: 360px;
 }
 
 .sorting-button {
@@ -475,10 +527,25 @@ overflow: hidden;
 
 .catalog-list {
   list-style: none;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog-item {
+  width: 360px;
+  margin-bottom: 33px;
 }
 
 .catalog-item-info {
   background-color: #eeeeee;
+
+  display: none;
 }
 
 .catalog-item-name a {
@@ -519,6 +586,9 @@ overflow: hidden;
 
 .pagination-list {
   list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-item a {
