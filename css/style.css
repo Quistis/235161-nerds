@@ -31,12 +31,22 @@ a {
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
-
   text-align: center;
   vertical-align: middle;
+  text-decoration: none;
 
   background-color: #fb565a;
+  border-radius: 3px;
   border: none;
+
+  display: block;
+  width: 160px;
+  padding: 15px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -59,7 +69,7 @@ overflow: hidden;
 }
 
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -75,6 +85,7 @@ overflow: hidden;
 .main-header-logo {
   width: 160px;
   height: 65px;
+  margin-top: 50px;
 }
 
 .main-header-logo img:hover {
@@ -90,6 +101,7 @@ overflow: hidden;
   line-height: 30px;
   font-weight: 500;
   color: #000000;
+  text-transform: uppercase;
 
   display: flex;
   justify-content: space-between;
@@ -98,24 +110,52 @@ overflow: hidden;
 .site-navigation {
   list-style: none;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   margin: 0;
   padding: 0;
-
   width: 440px;
 }
 
 .user-navigation {
   list-style: none;
 
+  display: flex;
   margin: 0;
   padding: 0;
 
-  width: 160px;
+  max-width: 160px;
+}
+
+.user-navigation .shopping-navigation-item {
+  position: relative;
+  padding-left: 80px;
+}
+
+.shopping-navigation-item::before {
+  content: "";
+
+  position: absolute;
+  top: 83px;
+  left: 41px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .site-navigation a,
 .user-navigation a {
   color: inherit;
+  vertical-align: middle;
+
+  display: block;
+  padding-top: 77px;
 }
 
 .site-navigation-item a:hover,
@@ -148,17 +188,17 @@ overflow: hidden;
   background-color: #eeeeee;
 
   padding-top: 9px;
+  margin-bottom: 80px;
 }
 
 .studio-features-slider-item {
-  padding-top: 67px;
+  padding-top: 60px;
 }
 
 .slider-item-1 {
   background-image: url("../img/slider-slide1.png");
   background-repeat: no-repeat;
   background-position: center right;
-
   padding-bottom: 80px;
 }
 
@@ -187,6 +227,11 @@ overflow: hidden;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+
+  margin: 0;
+  margin-bottom: 25px;
+
+  width: 380px;
 }
 
 .studio-features-slider-description {
@@ -194,13 +239,16 @@ overflow: hidden;
   line-height: 24px;
   font-weight: 400;
   color: #000000;
+
+  width: 360px;
+  margin: 0;
+  margin-bottom: 43px;
 }
 
-/*
 .studio-features-button {
-
+  display: block;
+  width: 240px;
 }
-*/
 
 .studio-features-button:hover,
 .studio-features-button:focus {
@@ -209,28 +257,41 @@ overflow: hidden;
 
 .studio-features-button:active {
   background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 
   color: rgba(255, 255, 255, 0.3);
+}
+
+.studio-features-slider-controls {
+  display: none;
 }
 /*----------------------------------------
             Advantages block
 -----------------------------------------*/
 .advantages {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  margin-bottom: 158px;
 }
 
 .advantages-list {
   list-style: none;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 
 .advantages-item {
   width: 300px;
+  margin-right: 100px;
+}
+
+.advantages-item:last-child {
+  margin-right: 0;
+}
+
+.advantages-item img {
+  margin-bottom: 20px;
 }
 
 .advantages-item-header {
@@ -239,6 +300,13 @@ overflow: hidden;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+
+  margin: 0;
+}
+
+.advantages-item-description {
+  width: 260px;
+  margin-bottom: 31px;
 }
 
 .button-red:hover,
@@ -282,8 +350,7 @@ overflow: hidden;
           About us block
 --------------------------------*/
 .about-studio {
-  padding-top: 80px;
-  padding-bottom: 70px;
+  margin-bottom: 140px;
   display: flex;
   justify-content: space-between;
 }
@@ -297,6 +364,15 @@ overflow: hidden;
   line-height: 45px;
   font-weight: 500;
   color: #000000;
+
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.about-us-description {
+  display: block;
+  margin-bottom: 43px;
 }
 
 .about-us-capabilities {
@@ -314,8 +390,17 @@ overflow: hidden;
   padding: 0;
 }
 
+.orders-item {
+  margin: 22px;
+  margin-left: 35px;
+}
+
 .studio-stats {
   width: 360px;
+}
+
+.studio-stats img {
+
 }
 
 .stats-table-title {
@@ -334,6 +419,10 @@ overflow: hidden;
   text-transform: uppercase;
 }
 
+.numeric-stats-info td {
+  padding-top: 50px;
+}
+
 .stats-description {
   font-size: 16px;
   line-height: 18px;
@@ -344,9 +433,9 @@ overflow: hidden;
                       Галерея
 -------------------------------------------------*/
 .projects-gallery {
-  padding-top: 70px;
   padding-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -394,7 +483,7 @@ overflow: hidden;
 
 .catalog-columns {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .filters {
@@ -540,6 +629,11 @@ overflow: hidden;
 .catalog-item {
   width: 360px;
   margin-bottom: 33px;
+  padding-top: 40px;
+}
+
+.catalog-item:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 .catalog-item-info {
@@ -685,7 +779,7 @@ ________________________________________*/
 .footer-map-widget {
   border: 1px;
   width: 100%;
-  height: 416px;
+  min-height: 416px;
 }
 /*---------------------------------------
               Социальный блок
