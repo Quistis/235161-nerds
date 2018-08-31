@@ -131,7 +131,7 @@ overflow: hidden;
 
 .user-navigation .shopping-navigation-item {
   position: relative;
-  padding-left: 80px;
+  padding-left: 82px;
 }
 
 .shopping-navigation-item::before {
@@ -185,6 +185,8 @@ overflow: hidden;
       Секция со слайдером
 ---------------------------------*/
 .studio-features-slider {
+  position: relative;
+
   background-color: #eeeeee;
 
   padding-top: 9px;
@@ -195,31 +197,35 @@ overflow: hidden;
   padding-top: 60px;
 }
 
-.slider-item-1 {
-  background-image: url("../img/slider-slide1.png");
-  background-repeat: no-repeat;
-  background-position: center right;
-  padding-bottom: 80px;
+.studio-features-slider-item {
+  display: none;
 }
 
-.slider-item-2 {
+.studio-features-slider-item:nth-child(1) {
+  display: block;
+}
+
+.studio-features-slider-item:nth-child(1) {
+  background-image: url("../img/slider-slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 0px;
+  padding-bottom: 81px;
+}
+
+.studio-features-slider-item:nth-child(2) {
   background-image: url("../img/slider-slide2.png");
   background-repeat: no-repeat;
   background-position: center right;
 
-  padding-bottom: 80px;
-
-  display: none;
+  padding-bottom: 81px;
 }
 
-.slider-item-3 {
+.studio-features-slider-item:nth-child(3) {
   background-image: url("../img/slider-slide3.png");
   background-repeat: no-repeat;
   background-position: center right;
 
-  padding-bottom: 80px;
-
-  display: none;
+  padding-bottom: 81px;
 }
 
 .studio-features-slider-header {
@@ -231,7 +237,7 @@ overflow: hidden;
   margin: 0;
   margin-bottom: 25px;
 
-  width: 380px;
+  max-width: 600px;
 }
 
 .studio-features-slider-description {
@@ -240,9 +246,9 @@ overflow: hidden;
   font-weight: 400;
   color: #000000;
 
-  width: 360px;
+  max-width: 430px;
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
 }
 
 .studio-features-button {
@@ -263,13 +269,88 @@ overflow: hidden;
 }
 
 .studio-features-slider-controls {
-  display: none;
+  display: flex;
+  justify-content: space-around;
+
+  position: absolute;
+  left: 50%;
+  bottom: 96px;
+  z-index: 100;
+
+  width: 107px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
 }
+
+.studio-features-slider-controls i {
+  position: relative;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 9px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: #ffffff;
+}
+
+.studio-features-slider-controls i::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+
+  width: 10px;
+  height: 10px;
+
+  background: #c1c1c1;
+
+  border-radius: 50%;
+}
+
+.studio-features-slider-controls .active::before {
+  content: "";
+
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  z-index: 2;
+
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+}
+
 /*----------------------------------------
             Advantages block
 -----------------------------------------*/
 .advantages {
-  margin-bottom: 158px;
+  position: relative;
+  margin-bottom: 79px;
+}
+
+.advantages::after {
+  content: "";
+
+  position: absolute;
+  top: 428px;;
+  left:auto;
+
+  width: 1160px;
+  height: 2px;
+
+  background-color: #eeeeee;
 }
 
 .advantages-list {
@@ -291,7 +372,7 @@ overflow: hidden;
 }
 
 .advantages-item img {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .advantages-item-header {
@@ -306,7 +387,7 @@ overflow: hidden;
 
 .advantages-item-description {
   width: 260px;
-  margin-bottom: 31px;
+  margin-bottom: 33px;
 }
 
 .button-red:hover,
@@ -350,13 +431,31 @@ overflow: hidden;
           About us block
 --------------------------------*/
 .about-studio {
-  margin-bottom: 140px;
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
+  /*margin-bottom: 105px;*/
+  margin-bottom: 69px;
+
+  position: relative;
+}
+
+.about-studio::after {
+  content: "";
+
+  position: absolute;
+  top: 529px;;
+  left:auto;
+
+  width: 1160px;
+  height: 2px;
+
+  background-color: #eeeeee;
 }
 
 .about-us {
   width: 660px;
+  padding-top: 38px;
 }
 
 .about-us-title {
@@ -367,12 +466,12 @@ overflow: hidden;
 
   display: block;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .about-us-description {
   display: block;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
 .about-us-capabilities {
@@ -391,7 +490,7 @@ overflow: hidden;
 }
 
 .orders-item {
-  margin: 22px;
+  margin: 24px;
   margin-left: 35px;
 }
 
@@ -400,7 +499,9 @@ overflow: hidden;
 }
 
 .studio-stats img {
-
+  display: block;
+  padding-top: 4px;
+  margin-bottom: 37px;
 }
 
 .stats-table-title {
@@ -420,7 +521,13 @@ overflow: hidden;
 }
 
 .numeric-stats-info td {
-  padding-top: 50px;
+  padding-top: 55px;
+  padding-right: 3px;
+  width: 100px;
+}
+
+.numeric-stats-info sup {
+  font-size: 29px;
 }
 
 .stats-description {
@@ -429,21 +536,70 @@ overflow: hidden;
   font-weight: 400;
   color: #283136;
 }
+
+.stats-description td {
+  padding-top: 34px;
+}
 /*-----------------------------------------------
                       Галерея
 -------------------------------------------------*/
 .projects-gallery {
-  padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 38px;
+
+  position: relative;
+}
+
+.projects-gallery::after {
+  content: "";
+
+  position: absolute;
+  top: 160px;;
+  left:auto;
+
+  width: 1160px;
+  height: 2px;
+
+  background-color: #eeeeee;
 }
 
 .projects-gallery-content {
+  display: flex;
+  justify-content: center;
   width: 260px;
+
+  position: relative;
+}
+
+.projects-gallery-content::after {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  left: 279px;
+
+  width: 2px;
+  height: 52px;
+
+  background-color: #eeeeee;
+  background-repeat: no-repeat;
+}
+
+.projects-gallery-content a {
+  display: block;
+  margin: auto;
+}
+
+.projects-gallery div:nth-of-type(4n)::after {
+  background-color: transparent;
 }
 
 .projects-gallery-content img {
+  padding-bottom: 40px;
+
   opacity: 0.2;
 }
 
@@ -719,8 +875,29 @@ overflow: hidden;
 /*--------------------------------------------------
                     Футер,  Контакты
 --------------------------------------------------*/
+.main-footer {
+  position: relative;
+}
+
 .footer-contacts {
   background-color: #ffffff;
+
+  content: "";
+
+  position: absolute;
+  top: 93px;
+  left: 372px;
+
+  display: block;
+  width: 314px;
+  min-height: 308px;
+
+  margin: auto;
+  padding: 0 50px;
+  padding-top: 50px;
+
+  border:none;
+  border-radius: 3px;
 }
 
 .footer-contacts-title {
@@ -729,13 +906,19 @@ overflow: hidden;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+
+  display: block;
+  margin: 0;
+  margin-bottom: 23px;
 }
 
-.footer-contacts-adress {
+.footer-contacts-address {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: #666666;
+
+  margin-bottom: 16px;
 }
 
 .write-us-tel {
@@ -743,6 +926,9 @@ overflow: hidden;
   line-height: 18px;
   font-weight: 400;
   color: #666666;
+
+  display: block;
+  margin-bottom: 39px;
 }
 
 .write-us-button {
@@ -750,6 +936,8 @@ overflow: hidden;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
+
+  width: 219px;
 }
 
 .write-us-button:hover,
@@ -785,13 +973,16 @@ ________________________________________*/
               Социальный блок
 ---------------------------------------*/
 .footer-social {
-  padding-top: 35px;
+  padding-top: 16px;
   display: flex;
   justify-content: flex-start;
 }
 
 .social-list {
+  display: flex;
+  justify-content: space-between;
   width: 260px;
+  padding-top: 12px;
 }
 
 .footer-social-links {
@@ -800,7 +991,16 @@ ________________________________________*/
 }
 
 .social-button-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 75px;
+  height: 75px;
+
   background-color: #e1e1e1;
+  border-radius: 50%;
+  border: none;
 }
 
 .social-button-item:hover,
@@ -808,8 +1008,13 @@ ________________________________________*/
   background-color: #e74246;
 }
 
-.social-button-item:active {
+.social-button-item:active path {
   background-color: #d7373b;
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social-links {
+  width: 550px;
 }
 
 .footer-social-links b {
@@ -817,6 +1022,10 @@ ________________________________________*/
   line-height: 36px;
   font-weight: 700;
   color: #000000;
+
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .footer-social-links p {
@@ -824,6 +1033,9 @@ ________________________________________*/
   line-height: 22px;
   font-weight: 400;
   color: #444444;
+
+  display: block;
+  margin: 0;
 }
 /*-------------------------------------
         Модальное окно Write Us
