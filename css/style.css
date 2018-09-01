@@ -398,6 +398,7 @@ overflow: hidden;
 .button-red:active {
   background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button-green {
@@ -412,6 +413,7 @@ overflow: hidden;
 .button-green:active {
   background-color: #00aa62;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button-yellow {
@@ -426,6 +428,7 @@ overflow: hidden;
 .button-yellow:active {
   background-color: #e5a722;
   color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 /*-------------------------------
           About us block
@@ -654,7 +657,6 @@ overflow: hidden;
 .filters-form-item {
   margin: 0;
   padding: 0;
-  width: 200px;
 }
 
 .filters-form-item legend {
@@ -784,11 +786,26 @@ overflow: hidden;
   color: #283136;
 }
 
+.features-filter {
+  margin-bottom: 24px;
+}
+
+.filter-legend {
+  margin-bottom: 17px;
+}
+
+.filter-label {
+  display: block;
+  margin-left: 37px;
+}
+
 .filter-input + label {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #283136;
+
+  margin-bottom: 20px;
 }
 
 .filter-input:hover + label,
@@ -809,6 +826,9 @@ overflow: hidden;
   text-transform: uppercase;
   color: #000000;
 
+  width: 260px;
+  margin-top: 29px;
+
   background-color: #eeeeee;
 }
 
@@ -824,7 +844,7 @@ overflow: hidden;
 .sorting {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 55px;
+  margin-bottom: 54px;
 }
 
 .sorting p {
@@ -840,11 +860,25 @@ overflow: hidden;
 }
 
 .sorting-buttons {
+  display: flex;
+  justify-content: space-between;
+
   list-style: none;
 
   margin: 0;
   padding: 0;
-  width: 360px;
+  width: 366px;
+}
+
+.sorting-item {
+  display: block;
+
+  margin-right: 13px;
+  padding-top: 1px;
+}
+
+.sorting-buttons .sorting-range-down {
+  align-self: flex-end;
 }
 
 .sorting-button {
@@ -889,7 +923,7 @@ overflow: hidden;
 
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 54px;
 
   display: flex;
   justify-content: space-between;
@@ -897,9 +931,25 @@ overflow: hidden;
 }
 
 .catalog-item {
+  position: relative;
+
   width: 360px;
-  margin-bottom: 33px;
+  margin-bottom: 26px;
   padding-top: 40px;
+}
+
+.catalog-item::before {
+  content: "";
+
+  position: absolute;
+  top: 1px;
+
+  width: 360px;
+  height: 40px;
+
+  background-image: url("../img/browser.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .catalog-item:nth-last-child(-n+2) {
@@ -907,9 +957,25 @@ overflow: hidden;
 }
 
 .catalog-item-info {
-  background-color: #eeeeee;
+  content: "";
 
-  display: none;
+  position: absolute;
+  top: 385px;
+  z-index: 2;
+
+  width: 360px;
+  min-height: 231px;
+
+  background-color: #eeeeee;
+}
+
+.catalog-item-name {
+  display: block;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  padding-top: 26px;
+  text-align: center;
 }
 
 .catalog-item-name a {
@@ -923,10 +989,20 @@ overflow: hidden;
 }
 
 .catalog-item-info p {
+  display: block;
+  margin: 0;
+  margin-left: 92px;
+  padding:0;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: #666666;
+
+  text-align: center;
+
+  width: 180px;
+  margin-bottom: 30px;
 }
 
 .button-item-price {
@@ -935,6 +1011,9 @@ overflow: hidden;
   font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
+
+  width: 200px;
+  margin-left: 80px;
 
   background-color: #fb565a;
 }
@@ -946,22 +1025,36 @@ overflow: hidden;
 
 .button-item-price:active {
   background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
 
   margin: 0;
   padding: 0;
+  padding-bottom: 18px;
+}
+
+.pagination-item {
+  margin-right: 7px;
 }
 
 .pagination-item a {
+  display: block;
+  padding: 13px 19px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: #000000;
 
   background-color: #eeeeee;
+  border: 3px solid #eeeeee;
+  border-radius: 3px;
 }
 
 .pagination-item a:hover,
@@ -970,7 +1063,8 @@ overflow: hidden;
 }
 
 .pagination-item-current a {
-  border: 2px solid #dbdbdb;
+  border: 3px solid #dbdbdb;
+  border-radius: 3px;
 
   background-color: transparent;
 }
@@ -980,11 +1074,15 @@ overflow: hidden;
   background-color: transparent;
 }
 
-.pagination-item-next {
+.pagination-item-next a {
+  display: block;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
+
+  width: 265px;
 }
 /*--------------------------------------------------
                     Футер,  Контакты
@@ -1061,6 +1159,7 @@ overflow: hidden;
 
 .write-us-button:active {
   background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1215,6 +1314,7 @@ ________________________________________*/
 
 .write-us-submit-button:active {
   background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 /*--------------------------------
 ----------------------------------*/
