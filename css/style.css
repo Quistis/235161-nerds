@@ -324,7 +324,7 @@ overflow: hidden;
   width: 10px;
   height: 10px;
 
-  background: #c1c1c1;
+  background: #ffffff;
 
   border-radius: 50%;
 }
@@ -333,16 +333,16 @@ overflow: hidden;
   content: "";
 
   position: absolute;
-  left: 11px;
-  top: 11px;
+  left: 9px;
+  top: 9px;
   z-index: 2;
 
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   margin: -4px;
 
   background-color: #ffffff;
-  border: 2px solid #eeeeee;
+  border: 2px solid #c1c1c1;
   border-radius: 50%;
 }
 
