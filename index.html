@@ -13,7 +13,7 @@
   <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <a class="main-header-logo">
+        <a class="main-header-logo" href="#">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
           </a>
         <ul class="site-navigation" aria-label="Навигация по сайту">
@@ -179,7 +179,7 @@
     </div>
   </footer>
   <section class="modal modal-write-us">
-    <h2>Напишите нам</h2>
+    <h2 class="write-us-title">Напишите нам</h2>
     <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
       <p class="write-us-item">
         <label for="write-us-name">Ваше имя:</label>
@@ -189,13 +189,13 @@
         <label for="write-us-email">Ваш e-mail:</label>
         <input class="write-us-email" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
       </p>
-      <p class="write-us-item">
+      <p class="write-us-item write-us-textarea">
         <label for="write-us-text-field">Текст письма:</label>
         <textarea class="write-us-text-field" name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
       </p>
       <button class="button write-us-submit-button" type="submit">Отправить</button>
     </form>
-    <button class="button modal-close">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 </body>
 
