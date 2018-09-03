@@ -289,7 +289,7 @@ overflow: hidden;
   position: absolute;
   left: 50%;
   bottom: 96px;
-  z-index: 100;
+  z-index: 3;
 
   width: 107px;
   height: 18px;
@@ -954,6 +954,8 @@ overflow: hidden;
 }
 
 .filter-button:active {
+  color: rgba(0, 0, 0, 0.3);
+
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -1232,16 +1234,16 @@ overflow: hidden;
 
   margin: 0;
   padding: 0;
-  padding-bottom: 18px;
+  padding-bottom: 21px;
 }
 
 .pagination-item {
-  margin-right: 7px;
+  margin-right: 11px;
 }
 
 .pagination-item a {
   display: block;
-  padding: 13px 19px;
+  padding: 15px 21px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1249,27 +1251,28 @@ overflow: hidden;
   color: #000000;
 
   background-color: #eeeeee;
-  border: 3px solid #eeeeee;
   border-radius: 3px;
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
   background-color: #dfdfdf;
-  border: 3px solid #dfdfdf;
 }
 
 .pagination-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+
   background-color: #d5d5d5;
-  border: 3px solid #d5d5d5;
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .pagination-item-current a {
-  border: 3px solid #dbdbdb;
+  box-shadow: inset 0px 0px 0px 3px rgba(219,219,219,1);
   border-radius: 3px;
 
   background-color: transparent;
+
+  padding: 14px 20px;
 }
 
 .pagination-item-current a:hover,
@@ -1285,7 +1288,7 @@ overflow: hidden;
   text-transform: uppercase;
   text-align: center;
 
-  width: 265px;
+  width: 260px;
 }
 /*--------------------------------------------------
                     Футер,  Контакты
@@ -1467,7 +1470,9 @@ ________________________________________*/
   background-repeat: repeat;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 
-  visibility: hidden;
+  z-index: 4;
+
+  display: none;
 }
 
 .modal-write-us {
