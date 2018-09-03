@@ -1522,7 +1522,7 @@ ________________________________________*/
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: #444444;
+  color: #a1a1a1;
 
   background-color: transparent;
   border: 2px solid #d7dcde;
@@ -1540,8 +1540,14 @@ ________________________________________*/
   border-color: #000000;
 }
 
+.write-us-item input:invalid {
+  color: #e74246;
+
+  border-color: #e74246;
+}
+
 .write-us-textarea {
-  width:760px;
+  width: 760px;
 }
 
 .write-us-item textarea {
