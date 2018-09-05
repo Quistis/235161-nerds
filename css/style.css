@@ -9,6 +9,8 @@ body {
   color: #283136;
 
   background-color: #ffffff;
+
+  min-width: 1240px;
 }
 
 html {
@@ -72,6 +74,10 @@ overflow: hidden;
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.main {
+  display: block;
 }
 /*-----------------------------------
               Header
@@ -364,7 +370,7 @@ overflow: hidden;
 
   position: absolute;
   top: 428px;
-  left:auto;
+  left: 0;
 
   width: 1160px;
   height: 2px;
@@ -466,8 +472,8 @@ overflow: hidden;
   content: "";
 
   position: absolute;
-  top: 529px;;
-  left:auto;
+  top: 529px;
+  left: 0;
 
   width: 1160px;
   height: 2px;
@@ -551,14 +557,14 @@ overflow: hidden;
 
 .numeric-stats-info {
   font-size: 45px;
-  line-height: 10px;
+  line-height: 45px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
 }
 
 .numeric-stats-info td {
-  padding-top: 55px;
+  padding-top: 38px;
   padding-right: 3px;
   width: 100px;
 }
@@ -575,7 +581,7 @@ overflow: hidden;
 }
 
 .stats-description td {
-  padding-top: 34px;
+  padding-top: 17px;
 }
 /*-----------------------------------------------
                       Галерея
@@ -594,8 +600,8 @@ overflow: hidden;
   content: "";
 
   position: absolute;
-  top: 160px;;
-  left:auto;
+  top: 160px;
+  left: 0;
 
   width: 1160px;
   height: 2px;
@@ -1002,6 +1008,8 @@ overflow: hidden;
 
   margin-right: 13px;
   padding-top: 1px;
+
+  outline: none;
 }
 
 .sorting-buttons .sorting-range-down {

@@ -6,12 +6,12 @@
   <title>Дизайн-студия Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style-minified-autoprefixed.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="inner-page">
   <header class="main-header">
-    <div class="container">
+    <div class="container main">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
@@ -29,11 +29,11 @@
       <h1 class="page-title">Магазин готовых шаблонов</h1>
     </div>
   </header>
-  <main class="container">
+  <main class="container main">
     <div class="catalog-columns">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
+        <form class="filters-form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="filters-form-item">
             <legend>Стоимость:</legend>
             <span class="visually-hidden">Фильтр по стоимости</span>
@@ -100,15 +100,15 @@
               <button class="sorting-button">По названию</button>
             </li>
             <li class="sorting-range-down sorting-range-current">
-              <button></button>
+              <button><span class="visually-hidden">Сортировка по убыванию</span></button>
             </li>
             <li class="sorting-range-up">
-              <button></button>
+              <button><span class="visually-hidden">Сортировка по возрастанию</span></button>
             </li>
           </ul>
         </section>
         <section class="catalog">
-          <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
+          <h2 class="visually-hidden">Каталог наших готовых шаблонов</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-item-image" src="img/catalog-sedona.jpg" width="360" height="576" alt="Седона">
