@@ -32,7 +32,7 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: center;
   text-decoration: none;
 
   background-color: #fb565a;
@@ -64,7 +64,7 @@ white-space: nowrap;
 
 -webkit-clip-path: inset(100%);
 clip-path: inset(100%);
-clip: rect(0 0 0 0);
+clip: rect(0, 0, 0, 0);
 overflow: hidden;
 }
 
@@ -85,7 +85,7 @@ overflow: hidden;
 .main-header-logo {
   width: 160px;
   height: 65px;
-  margin-top: 50px;
+  margin-top: 49px;
 }
 
 .main-header-logo img:hover {
@@ -104,6 +104,7 @@ overflow: hidden;
   text-transform: uppercase;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -362,7 +363,7 @@ overflow: hidden;
   content: "";
 
   position: absolute;
-  top: 428px;;
+  top: 428px;
   left:auto;
 
   width: 1160px;
@@ -498,7 +499,7 @@ overflow: hidden;
 .about-us-capabilities {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
   text-transform: uppercase;
 }
@@ -1066,6 +1067,7 @@ overflow: hidden;
 .sorting-button {
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 
@@ -1251,7 +1253,7 @@ overflow: hidden;
 
   font-size: 16px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #000000;
 
   background-color: #eeeeee;
@@ -1657,11 +1659,11 @@ ________________________________________*/
 
 .modal-close {
   position: absolute;
-  top: 72px;
-  right: 82px;
+  top: 78px;
+  right: 88px;
 
-  width: 21px;
-  height: 21px;
+  width: 23px;
+  height: 25px;
 
   font-size: 0;
 
@@ -1677,8 +1679,8 @@ ________________________________________*/
   content: "";
 
   position: absolute;
-  top: 16px;
-  left: -11px;
+  top: 11px;
+  left: -2px;
 
   width: 27px;
   height: 4px;

@@ -6,7 +6,7 @@
   <title>Дизайн-студия Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-minified-autoprefixed.css" rel="stylesheet">
 </head>
 
 <body class="inner-page">
@@ -186,7 +186,7 @@
   <footer class="main-footer">
     <section class="footer-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <iframe class="footer-map-widget" src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" allowfullscreen="true" aria-label="Карта. Наш адрес - Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+      <iframe class="footer-map-widget" src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" allowfullscreen aria-label="Карта. Наш адрес - Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
     </section>
     <div class="container">
       <section class="footer-contacts">
@@ -252,8 +252,10 @@
       </p>
       <button class="button write-us-submit-button" type="submit">Отправить</button>
     </form>
-    <button class="button modal-close">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
+  <script src="js/write-us-popup-minified.js"></script>
+  <script src="js/slider-control.js"></script>
 </body>
 
 </html>
